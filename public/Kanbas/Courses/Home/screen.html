@@ -1,123 +1,145 @@
-<table>
-    <tbody>
-        <tr>
-            <td valign="top">
-                <ul>
-                    <li><a href="/Kanbas/Account/Navigation/index.html">
-                            Account</a></li>
-                    <li>
-                        <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+    />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/navigation.css" />
+  </head>
+
+  <body>
+    <div class="d-block d-md-none">
+      <div class="nav">
+        <a href="/Kanbas/Courses/Home/kanbasNavigation.html">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <p>CS 4550.12631.202410 Modules</p>
+        <a href="/Kanbas/Courses/Home/NavigationSmall.html">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
+      <br />
+    </div>
+    <div class="row nav-height">
+      <ul class="col-sm-1 d-md-block d-none wd-kanbas-navigation">
+        <li><a href="http://northeastern.edu">N</a></li>
+        <li>
+          <a href="/Kanbas/Account/Profile/screen.html"
+            ><i class="fa-solid fa-user"></i>Account</a
+          >
+        </li>
+        <li>
+          <a href="/Kanbas/Dashboard/screen.html">
+            <i class="fa-solid fa-gauge"></i>Dashboard</a
+          >
+        </li>
+        <li class="wd-active">
+          <a href="/Kanbas/Courses/Home/screen.html"
+            ><i class="fa-solid fa-book"></i> Courses</a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-clock"></i> History</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-tv"></i> Studio</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-arrow-right"></i> Commons</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-question"></i> Help</a>
+        </li>
+      </ul>
+      <div class="col">
+        <div class="d-none d-md-block">
+          <h1>
+            <i class="fa-solid fa-bars"></i>
+            &emsp;CS 4550.12631.202410 > Modules
+          </h1>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col-sm-1 wd-bg-color-red d-md-block d-none">
+            <ul class="wd-navigation">
+              <li>
+                <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
+              </li>
+              <li class="wd-active">
+                <a href="/Kanbas/Courses/Modules/screen.html"> Modules</a>
+              </li>
+              <li><a href="/Kanbas/Courses/Piazza/index.html"> Piazza</a></li>
+              <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
+              <li>
+                <a href="/Kanbas/Courses/Assignments/screen.html">
+                  Assignments</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col wd-bg-color-blue d-md-block d-lg-block">
+            <div class="container">
+              <div>
+                <button>Collapse All</button>
+                <button>View Progress</button>
+                <select>
+                  <option>Publish All</option>
+                  <option>Publish All Modules and Items</option>
+                  <option>Publish Modules Only</option>
+                  <option>Unpublish All</option>
+                </select>
+                <button>+ Module</button>
+              </div>
+              <hr />
+              <ul class="list-group wd-modules">
+                <li class="list-group-item">
+                  <div>Week 1</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Learning Objectives</li>
+                    <li class="list-group-item">Introduction to the course</li>
+                    <li class="list-group-item">
+                      Learn what is Web Development
                     </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Calendar/index.html">Calendar</a>
-                    </li>
-                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-                </ul>
-            </td>
-            <td valign="top">
-                <ul>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Piazza/index.html">
-                            Piazza</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Grades/screen.html">
-                            Grades</a>
-                    </li>
-                    <li><a href="/Kanbas/Courses/Assignments/screen.html">
-                            Assignments</a>
-                    </li>
-                
-                </ul>
-            </td>
-            <td valign="top">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <button>Collapse All</button>
-                                <button>View Progress</button>
-                                <select id="publish-all">
-                                    <option selected>Publish All</option>
-                                </select>
-                                <button>Module</button><br />
-                                <ul>
-                                    <li>Week 0-INTRO</li>
-                                    <ul>
-                                        <li>LEARNING OBJECTIVES</li>
-                                        <ul>
-                                            <li>Introduction to the course</li>
-                                            <li>Learn what is Web Development</li>
-                                            <li>Creating a development environment</li>
-                                            <li>Creating a Web Application</li>
-                                            <li>Getting started with the 1st assignment</li>
-                                        </ul>
-                                        <li>READING</li>
-                                        <ul>
-                                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                                        </ul>
-                                        <li>SLIDES</li>
-                                        <ul>
-                                            <li><a href="https://www.google.com/maps">Introduction to Web Development Links to an
-                                                    external site.</a></li>
-                                            <li><a href="https://www.google.com/maps">Creating an HTTP server with Node.js Links to an
-                                                    external site.</a></li>
-                                            <li><a href="https://www.google.com/maps">Creating a React Application Links to an external
-                                                    site.</a></li>
-                                        </ul>
-                                    </ul>
-                                    <li>Week 1-HTML</li>
-                                    <ul>
-                                        <li>LEARNING OBJECTIVES</li>
-                                        <ul>
-                                            <li>Learn how to create user interfaces with HTML</li>
-                                            <li>Keep working on assignment 1</li>
-                                            <li>Deploy the assignment to Netlify</li>
-                                        </ul>
-                                        <li>READING</li>
-                                        <ul>
-                                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                                        </ul>
-                                    </ul>
-                                </ul>
-                            </td>
-                            <td valign="top">
-                                <h1>Course Status</h1>
-                                <button>Unpublish</button><button>Published</button>
-                                <ul>
-                                    <li><a href="https://www.google.com/maps">Introduction to Web Development Links to an external
-                                            site.</a></li>
-                                    <li><a href="https://www.google.com/maps">Creating an HTTP server with Node.js Links to an external
-                                            site.</a></li>
-                                    <li><a href="https://www.google.com/maps">Creating a React Application Links to an external
-                                            site.</a></li>
-                                </ul>
-                                <h1>Coming Up</h1>
-                                <a href="https://www.google.com/maps">View Calendar</a>
-                                <ul>
-                                    <li><a href="https://www.google.com/maps">Introduction to Web Development Links to an external
-                                            site.</a></li>
-                                    <li><a href="https://www.google.com/maps">Creating an HTTP server with Node.js Links to an external
-                                            site.</a></li>
-                                    <li><a href="https://www.google.com/maps">Creating a React Application Links to an external
-                                            site.</a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                  </ul>
+                </li>
+                <li class="list-group-item">
+                  <div>Week 2</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Learning Objectives</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-xl-2 d-none d-lg-block wd-bg-color-green">
+            <h4>Course Status</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <button>Unpublish</button>
+                    <button>Publish</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button>Import Existing Content</button><br />
+            <button>Import From Commons</button><br />
+            <button>Choose Home Page</button><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

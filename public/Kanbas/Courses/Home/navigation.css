@@ -1,0 +1,48 @@
+.kb-navigation-small li {
+  list-style: none;
+}
+
+.kb-navigation-small li a {
+  color: red;
+}
+
+.kb-navigation-small li a i {
+  margin-right: 2rem;
+}
+
+.kb-navigation-small {
+  font-size: x-large;
+}
+
+.x {
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav {
+  background-color: black;
+  height: 45px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav a i {
+  color: white;
+}
+
+.navigation-small li {
+  list-style: none;
+}
+
+.navigation-small li a {
+  color: red;
+}
+
+.navigation-small li i {
+  color: red;
+}
+.nav-height {
+  height: 100%;
+}
