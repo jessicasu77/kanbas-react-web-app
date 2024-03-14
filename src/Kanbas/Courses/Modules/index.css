@@ -48,3 +48,13 @@
 .wd-modules>li {
     margin-bottom: 20px;
 }
+
+.add-new-module {
+    width:80%;;
+}
+
+.bottom-module-btns {
+    background-color: rgb(245, 222, 159);
+    display: flex;
+    justify-content: space-between;
+}
