@@ -4,7 +4,8 @@
     padding: 0px;
     margin: 0px;
     width: 80px;
-    height: 10000px;
+    height: 100%; 
+    /* TODO FIGURE OUT HOW TO GET HEIGHT TO SPAN FULL SCREEN */
 }
 
 .wd-kanbas-navigation li {
