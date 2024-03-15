@@ -40,5 +40,4 @@ function WorkingWithArrays() {
     </div>
   );
 }
-// TODO REPLACE WITH EXACT CONTENT FROM LAB
 export default WorkingWithArrays;
