@@ -6,12 +6,36 @@ import {
   addModule,
   deleteModule,
   updateModule,
-  setModule,
+  setModule, setModules
 } from "./reducer";
 import { KanbasState } from "../../store";
+import { useEffect } from "react";
+import * as client from "../client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   const moduleList = useSelector((state: KanbasState) => 
     state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
@@ -34,8 +58,8 @@ function ModuleList() {
           }
         />
         <br/>
-        <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} className="btn btn-primary">Add</button>
-        <button className="btn btn-primary" onClick={() => dispatch(updateModule(module))}>
+        <button onClick={handleAddModule} className="btn btn-primary">Add</button>
+        <button className="btn btn-primary" onClick={handleUpdateModule}>
                 Update
         </button>
 
@@ -90,7 +114,7 @@ function ModuleList() {
               </ul>
             <div className="bottom-module-btns">
             <button 
-                onClick={() => dispatch(deleteModule(module._id))}>
+                onClick={() => handleDeleteModule(module._id)}>
                 Delete
               </button>
             <button

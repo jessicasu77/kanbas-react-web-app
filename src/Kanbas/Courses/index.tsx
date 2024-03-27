@@ -1,4 +1,3 @@
-// import { coursesData as courses } from "../../Kanbas/Database";
 import { useParams, Route, Routes, Navigate } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
@@ -6,10 +5,19 @@ import Modules from "./Modules";
 import Home from "./Home";
 import "./index.css";
 import Assignments from "./Assignments";
+import { useState, useEffect } from "react";
+import { findCourseById } from "./client";
 
-function Courses({ courses }: { courses: any[]; }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState<any>({ _id: "" });
+  
+
+  useEffect(() => {
+    setCourse(findCourseById(courseId));
+
+  }, [courseId]);
+
   return (
     <div>
       <div className="course d-md-block d-none">
